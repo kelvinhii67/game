@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>打工人逆袭模拟器</title>
+<style>
+body {text-align:center;font-family:Arial;background:#111;color:#fff;}
+button {padding:15px 30px;font-size:20px;margin:10px;border-radius:10px;border:none;}
+#money {font-size:40px;margin:20px;}
+</style>
+</head>
+<body>
+
+<h1>打工人逆袭模拟器 💼</h1>
+<div id="money">💰 0</div>
+
+<button onclick="work()">打工赚钱</button>
+<button onclick="upgrade()">升级效率 (50)</button>
+<button onclick="auto()">买自动赚钱 (100)</button>
+
+<script>
+let money=0,power=1,autoIncome=0;
+function update(){document.getElementById("money").innerText="💰 "+Math.floor(money);}
+function work(){money+=power;update();}
+function upgrade(){if(money>=50){money-=50;power++;update();}}
+function auto(){if(money>=100){money-=100;autoIncome++;update();}}
+setInterval(()=>{money+=autoIncome;update();},1000);
+update();
+</script>
+
+</body>
+</html>
