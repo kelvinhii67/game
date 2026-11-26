@@ -1,0 +1,22 @@
+{
+  "desktop": {
+    "viewport": "1440×900",
+    "audioBuffers": 16,
+    "controls": "WASD/Space/J/left mouse/Q/E/R/F/C, Tab, Escape",
+    "states": "cover, help, upgrade, gear, both boss phases, victory, defeat, retry"
+  },
+  "mobile": {
+    "viewport": "390×844, 320×700 and 844×390",
+    "multitouch": "movement + attack, dash, active skill",
+    "stress": {
+      "entities": 58,
+      "dpr": 0.82,
+      "detail": 0,
+      "meanFps": 50.3,
+      "p95Millis": 33.4,
+      "samples": 93,
+      "cpuThrottle": 4
+    }
+  },
+  "version": "156.0.8078.79"
+}

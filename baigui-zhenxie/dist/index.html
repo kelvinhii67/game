@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111b1d">
+  <meta name="description" content="百鬼镇邪是一款原创暗黑国风动作 RPG。守过雾隐村的三更，迎战铜面祠君。">
+  <title>百鬼镇邪 · 雾隐村</title>
+  <link rel="icon" href="assets/talisman.webp" type="image/webp">
+  <link rel="preload" href="assets/cover.webp" as="image">
+  <link rel="stylesheet" href="game.css">
+  <script defer src="rules.js"></script>
+  <script defer src="render.js"></script>
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <main id="app">
+    <canvas id="field" aria-label="雾隐村战斗画面" hidden></canvas>
+    <section id="title" aria-labelledby="game-title">
+      <div class="title-art"></div>
+      <div class="title-grain"></div>
+      <div class="frame" aria-hidden="true"></div>
+      <header class="masthead">
+        <div class="wordmark"><span class="seal">镇</span><span>雾隐异闻<span class="wordmark-en">THE WUYIN CHRONICLE</span></span></div>
+        <button class="icon-button sound" type="button" aria-label="关闭声音"></button>
+      </header>
+      <div class="title-copy">
+        <div class="chapter"><i></i>雾隐村 <em></em> 子时<i></i></div>
+        <h1 id="game-title"><span>百鬼</span><span>镇邪</span><small aria-hidden="true">敕<br>令</small></h1>
+        <div class="title-en">NIGHT OF A HUNDRED GHOSTS</div>
+        <p>雾起三更，百鬼叩门。<br>执一柄桃木剑，赴一场阴阳之约。</p>
+        <div class="title-actions">
+          <button id="start" class="primary" type="button" disabled><span>入村镇邪</span><span class="button-mark" aria-hidden="true">◇</span></button>
+          <button id="help" class="secondary" type="button">行走手记</button>
+        </div>
+        <div id="record" hidden></div>
+      </div>
+      <footer class="title-footer"><span>祖祠有异，入夜勿回头。</span><span>第一卷 <b>·</b> 雾隐村</span></footer>
+    </section>
+
+    <section id="hud" aria-label="战斗状态" hidden>
+      <div class="status">
+        <div class="portrait"><img src="assets/portrait.webp" alt=""></div>
+        <div class="vitals">
+          <div class="nameplate"><strong>沈砚</strong><span id="level">境界 1</span></div>
+          <div class="meter hp"><i id="hp-fill"></i><span id="hp-text">120 / 120</span></div>
+          <div class="meter xp"><i id="xp-fill"></i></div>
+        </div>
+      </div>
+      <div class="objective">
+        <div id="wave-name">初更 · 夜行纸人</div>
+        <b id="clock">00:00</b>
+        <div class="wave-progress"><i id="wave-fill"></i></div>
+      </div>
+      <div class="right-hud">
+        <span class="kills"><span aria-hidden="true">✦</span> <b id="kills">0</b></span>
+        <button id="bag" class="icon-button" type="button" aria-label="行囊"><img src="assets/jade.webp" alt=""></button>
+        <button class="icon-button sound" type="button" aria-label="关闭声音"></button>
+        <button id="pause" class="icon-button" type="button" aria-label="暂停">Ⅱ</button>
+      </div>
+      <div id="boss-hud" hidden>
+        <div><span>铜面祠君</span><small id="boss-phase">引魂</small></div>
+        <div class="meter boss-meter"><i id="boss-fill"></i></div>
+        <p id="boss-move"></p>
+      </div>
+      <div id="announce" aria-live="polite"></div>
+      <div id="notice" aria-live="polite"></div>
+      <div id="joystick" aria-label="移动摇杆"><i></i></div>
+      <div class="controls">
+        <div class="spellbar" id="spellbar"></div>
+        <div class="basicbar">
+          <button class="slot dash" type="button" id="dash" aria-label="闪避"><i class="dash-icon"></i><kbd>空格</kbd><span>闪避</span><b></b></button>
+          <button class="slot attack" type="button" id="attack" aria-label="普攻"><img src="assets/sword.webp" alt=""><kbd>J</kbd><span>桃木剑</span><b></b></button>
+        </div>
+      </div>
+      <div class="hint">WASD 移动 <b>·</b> 左键 / J 攻击 <b>·</b> 空格闪避 <b>·</b> Tab 行囊 <b>·</b> Esc 暂停</div>
+    </section>
+
+    <section id="overlay" hidden aria-label="游戏菜单">
+      <div id="dialog" class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1">
+        <div id="dialog-content"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

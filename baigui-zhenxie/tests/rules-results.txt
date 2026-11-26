@@ -1,0 +1,22 @@
+{"seed":52,"policy":"mixed","phase":"win","time":116.93,"level":13,"hp":120,"kills":193,"learned":[2,3,3,3,2],"bag":29,"maxCrowd":12}
+{"seed":815,"policy":"summons","phase":"win","time":116.55,"level":13,"hp":120,"kills":192,"learned":[2,3,3,3,2],"bag":26,"maxCrowd":12}
+{"seed":1126,"policy":"blade","phase":"win","time":119.97,"level":13,"hp":120,"kills":194,"learned":[0,0,3,3,0],"bag":19,"maxCrowd":15}
+✔ combat handles melee damage, hit stop, knockback and evasive invulnerability (5.120725ms)
+✔ paper summons deal autonomous damage and rank three adds multiple fighters (3.426625ms)
+✔ ghost marks, thunder consumes marks and leaps, rank three double strike works (0.825462ms)
+✔ talisman impact can burn a group and rank three fans out (1.028828ms)
+✔ array pulls and then slows, alongside repeated damage (0.934987ms)
+✔ loot grants levels with three unique choices and equips a higher-quality item (0.873705ms)
+✔ boss announces distinct shapes, transitions at 55%, then can be defeated (4.38606ms)
+✔ standing still and taking enemy attacks leads to defeat (20.980737ms)
+✔ complete seeded run with ordinary combat inputs 52 mixed (85.184237ms)
+✔ complete seeded run with ordinary combat inputs 815 summons (73.898196ms)
+✔ complete seeded run with ordinary combat inputs 1126 blade (62.064171ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 265.712987
